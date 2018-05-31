@@ -87,7 +87,7 @@
                      console.log(rtn);
                      if(rtn.code=="000000"){
                      window.location.href = "${pageContext.request.contextPath}/user_info/index.action";
-                     alert("登录成功");
+                    //alert("登录成功");
                      }
                      else {
                          addErrorMsg("login_name",rtn.message)

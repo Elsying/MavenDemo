@@ -14,6 +14,20 @@
     <!-- 处理静态资源 -->
     <mvc:default-servlet-handler/>
 
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+    <!-- 对所有请求都拦截，公共拦截器可以有多个 -->
+
+    <!-- <bean name="testInterceptor" class="cn.zifangsky.interceptor.TestInterceptor" /> -->
+    <mvc:interceptor>
+        <!-- 登录认证拦截 -->
+        <mvc:mapping path="/**"/>
+        <!-- 特定请求的拦截器只能有一个 -->
+        <bean class="com.bc.intercentor.AIntercentor" />
+    </mvc:interceptor>
+</mvc:interceptors>
+
+
     <!-- 配置视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/page/"/>

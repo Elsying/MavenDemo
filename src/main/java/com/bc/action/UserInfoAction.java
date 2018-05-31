@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("user_info")  //uel映射
@@ -25,13 +26,24 @@ public class UserInfoAction {
      */
     @RequestMapping("index.action")
     public String index() {
-        return "/admain/index";
+        return "/admain/login";
     }
     /**
      * 跳转登录页面
      */
     @RequestMapping("login.action")
     public String login() {
+        return "/admain/login";
+    }
+
+
+    /**
+     * 退出登录
+     * 销毁session
+     */
+    @RequestMapping("login_out")
+    public String loginout(HttpSession session) {
+        session.invalidate();
         return "/admain/login";
     }
 

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false"%>
+<%@ page contentType="text/html;charset=UTF-8"  isELIgnored="false"%>
 <!--字体图标样式-->
 <link href="${pageContext.request.contextPath}/static/javaex/pc/css/icomoon.css" rel="stylesheet" />
 <!--动画样式-->
@@ -28,7 +28,7 @@
                 <a class="pull-left user-photo" href="#"><img src="${pageContext.request.contextPath}/static/javaex/pc/images/user.jpg" alt=""></a>
                 <p class="pull-left margin-left-10">欢迎您，<span>管理员</span></p>
                 <label class="margin-left-10 margin-right-10">|</label>
-                <a href="#">退出</a>
+                <a href="${pageContext.request.contextPath}/user_info/login_out.action">退出</a>
             </li>
             <li>
                 <a href="#">
